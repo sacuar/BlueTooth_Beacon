@@ -34,7 +34,7 @@ void setup() {
   Serial.begin(115200);
   Serial.println("Starting BLE work!Give Thanks to Sacuar");
 
-  BLEDevice::init("ESPBeacon1");
+  BLEDevice::init("ESPBeacon_Sacuar");
   BLEServer *pServer = BLEDevice::createServer();
   BLEService *pService = pServer->createService(SERVICE_UUID);
   BLECharacteristic *pCharacteristic = pService->createCharacteristic(
