@@ -2,8 +2,9 @@
     Based on Neil Kolban example for IDF: https://github.com/nkolban/esp32-snippets/blob/master/cpp_utils/tests/BLE%20Tests/SampleServer.cpp
     Ported to Arduino ESP32 by Evandro Copercini
     updates by chegewara
+    updated by Muhammed Sacuar Hussain
 */
-
+// This arduino code scans the RSSIand other info while itself advertises to nearest devices with a Bluethooth advertisement, A server is created
 #include <BLEDevice.h>
 #include <BLEUtils.h>
 #include <BLEServer.h>
@@ -31,7 +32,7 @@ class MyAdvertisedDeviceCallbacks: public BLEAdvertisedDeviceCallbacks {
 
 void setup() {
   Serial.begin(115200);
-  Serial.println("Starting BLE work!");
+  Serial.println("Starting BLE work!Give Thanks to Sacuar");
 
   BLEDevice::init("ESPBeacon1");
   BLEServer *pServer = BLEDevice::createServer();
